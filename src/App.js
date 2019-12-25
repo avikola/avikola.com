@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Button from "react-bootstrap/Button";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="App-header">
         <p>Avishkar Kolahalu - Site Under Construction</p>
       </header>
+      <Button variant="primary">Primary</Button>
     </div>
   );
 }
