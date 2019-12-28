@@ -9,6 +9,11 @@
   display: flex;
   width: 100%;
   color: white;
+
+  @media (max-width: 594px) {
+    display: inline-block;
+    text-align: center;
+  }
 }
 
 body {

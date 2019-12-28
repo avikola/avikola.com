@@ -1,12 +1,5 @@
 @import "src/common/variables.scss";
 
-.full_home_site {
-  @media (max-width: 594px) {
-    display: inline-block;
-    text-align: center;
-  }
-}
-
 .intro-text {
   position: relative;
   //right: 6.18vw;
@@ -15,8 +8,7 @@
 
   @media (max-width: 594px) {
     position: absolute;
-    margin-top: 20vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
   }
 }
 
@@ -61,5 +53,10 @@ h1 {
   @media (min-width: 594px) and (max-width: 1024px) {
     margin-top: -1.3vh;
     font-size: 2.2vw;
+  }
+
+  @media (max-width: 594px) {
+    font-size: 5.3vw;
+    margin-top: -1.3vh;
   }
 }
