@@ -15,11 +15,11 @@ export class Intro extends React.Component {
       "",
       "Hello there.",
       "You can call me Avi.",
-      "This is not the button you're looking for",
+      "Yeah, this isn't a button.",
       "Click somewhere else!",
-      "No.",
+      "No. Stop.",
       "Fine, you win.",
-      "Click again for a prize."
+      "Click again for the prize!"
     ];
   }
 
@@ -50,13 +50,6 @@ export class Intro extends React.Component {
   render() {
     return (
       <div className="intro-text">
-        <DontPressMe
-          closeit={this.closeToast.bind(this)}
-          toast_show={this.state.toast_show}
-          press_dictionary={this.press_dictionary}
-          num_of_clicks={this.state.num_of_clicks}
-        />
-
         <p className="p-hello">Hello, I'm</p>
 
         {this.state.dict_check === 1 && (
@@ -84,6 +77,12 @@ export class Intro extends React.Component {
         {this.state.dict_check === 3 && <h1>Avishkar Kolahalu.</h1>}
 
         <p className="p-sd">&#47;&#47; Software Developer</p>
+        <DontPressMe
+          closeit={this.closeToast.bind(this)}
+          toast_show={this.state.toast_show}
+          press_dictionary={this.press_dictionary}
+          num_of_clicks={this.state.num_of_clicks}
+        />
       </div>
     );
   }

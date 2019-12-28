@@ -5,10 +5,7 @@ import "./DontPressMe.scss";
 export const DontPressMe = props => {
   return (
     <Toast
-      style={{
-        position: "fixed",
-        marginTop: -40
-      }}
+      style={{}}
       onClose={props.closeit}
       className="dontpressmetoast"
       show={props.toast_show}

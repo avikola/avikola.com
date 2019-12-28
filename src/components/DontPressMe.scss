@@ -6,4 +6,12 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   text-align: center;
+  width: 200px;
+
+  @media (max-width: 594px) {
+    margin-top: -35vh;
+    width: 100%;
+    background-color: white;
+    color: $palette-black;
+  }
 }
