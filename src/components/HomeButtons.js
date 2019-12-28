@@ -1,12 +1,13 @@
 import React from "react";
-import { MainButton } from "./MainButton";
+import "./HomeButtons.scss";
+import { EachButton } from "./EachButton";
 
 export const HomeButtons = () => {
   return (
-    <div>
-      <MainButton label="" />
-      <MainButton label="" />
-      <MainButton label="" />
+    <div className="h-buttons">
+      <EachButton label="Projects" num="1" />
+      <EachButton label="About" num="2" />
+      <EachButton label="Contact" num="3" />
     </div>
   );
 };

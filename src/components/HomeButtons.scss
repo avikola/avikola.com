@@ -1,0 +1,14 @@
+@import "src/common/variables.scss";
+
+.h-buttons {
+  position: relative;
+  left: 8.29vw;
+  margin-top: 25.69vh;
+
+  @media (max-width: 594px) {
+    width: 100%;
+    text-align: center;
+    left: auto;
+    margin-top: 5vh;
+  }
+}

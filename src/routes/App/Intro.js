@@ -3,10 +3,10 @@ import "./Intro.scss";
 
 export const Intro = () => {
   return (
-    <div>
-      <p>Hello, I'm</p>
-      <h1>Avishkar Kolahalu</h1>
-      <p>&#47;&#47; Software Engineer</p>
+    <div className="intro-text">
+      <p className="p-hello">Hello, I'm</p>
+      <h1>Avishkar Kolahalu.</h1>
+      <p className="p-sd">&#47;&#47; Software Developer</p>
     </div>
   );
 };
