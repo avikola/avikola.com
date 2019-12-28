@@ -10,6 +10,8 @@
     position: absolute;
     margin-top: 5vh;
   }
+
+  cursor: default;
 }
 
 p {
@@ -58,5 +60,20 @@ h1 {
   @media (max-width: 594px) {
     font-size: 5.3vw;
     margin-top: -1.3vh;
+  }
+}
+
+.rolled-link {
+  text-decoration: none;
+  color: $palette-red;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+    color: $palette-red;
+    cursor: default;
   }
 }

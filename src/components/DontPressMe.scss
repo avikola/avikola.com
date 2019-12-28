@@ -1,0 +1,9 @@
+@import "src/common/variables.scss";
+
+.dontpressmetoast {
+  background-color: $palette-violet;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
