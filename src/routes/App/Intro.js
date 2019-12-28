@@ -19,7 +19,7 @@ export class Intro extends React.Component {
       "",
       "Hello there.",
       "You can call me Avi!",
-      "Hey, this isn't a button.",
+      "Hey, uh, this isn't an important button.",
       "Click somewhere else!",
       "No. Stop.",
       "Fine, you win.",

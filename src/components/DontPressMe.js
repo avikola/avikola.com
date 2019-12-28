@@ -3,8 +3,11 @@ import Toast from "react-bootstrap/Toast";
 import "./DontPressMe.scss";
 
 export const DontPressMe = props => {
-  let delay_secs = 3000;
-  if (props.num_of_clicks == 10) delay_secs = 6000;
+  var delay_secs = 3000;
+  if (props.num_of_clicks === "10") {
+    delay_secs = 6000;
+    console.log(delay_secs);
+  }
   return (
     <Toast
       onClose={props.closeit}
