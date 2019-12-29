@@ -1,7 +1,6 @@
 @import "src/common/variables.scss";
 
-.dontpressmetoast {
-  background-color: $palette-violet;
+@mixin commonToast() {
   color: white;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -13,5 +12,21 @@
     width: 100%;
     background-color: white;
     color: $palette-black;
+  }
+}
+
+.dontpressmetoast {
+  @include commonToast();
+  background-color: $palette-violet;
+}
+
+.dontpressmefinaltoast {
+  @include commonToast();
+  background-color: $palette-red;
+  font-size: 1.1em;
+
+  @media (max-width: 594px) {
+    color: white;
+    background-color: $palette-red;
   }
 }

@@ -4,14 +4,15 @@ import "./DontPressMe.scss";
 
 export const DontPressMe = props => {
   var delay_secs = 3000;
-  if (props.num_of_clicks === "10") {
-    delay_secs = 6000;
-    console.log(delay_secs);
+  var pressMeCSS = "dontpressmetoast";
+  if (props.num_of_clicks === 10) {
+    delay_secs = 4500;
+    pressMeCSS = "dontpressmefinaltoast";
   }
   return (
     <Toast
       onClose={props.closeit}
-      className="dontpressmetoast"
+      className={pressMeCSS}
       show={props.toast_show}
       delay={delay_secs}
       autohide

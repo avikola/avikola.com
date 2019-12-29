@@ -9,27 +9,32 @@ export class Intro extends React.Component {
     this.state = {
       num_of_clicks: 0,
       toast_show: false,
-      dict_check: 1,
+      dict_check: 1, // controls type of h1
       confetti: false,
-      gravity: 0.8
+      gravity: 0.5, // gravity of confetti
+      finalpress: 1 // final message toast control
     };
-    this.dontPressMe = this.dontPressMe.bind(this);
-    this.startConfetti = this.startConfetti.bind(this);
+    this.finalpresscheck = true;
     this.press_dictionary = [
       "",
       "Hello there.",
       "You can call me Avi!",
-      "Hey, uh, this isn't an important button.",
+      "Uh, this button is useless.",
       "Click somewhere else!",
-      "No. Stop.",
+      "Stop. What are you trying to do?",
       "Fine, you win.",
-      "I baked you cake.",
+      "I baked you a winner's cake.",
       "It's delicious, I promise.",
-      "Initiating surprise in 3..2..1..",
-      "I made it all up."
+      "Initiating cake in 3... 2... 1...",
+      "THE CAKE WAS A LIE"
     ];
+
+    this.dontPressMe = this.dontPressMe.bind(this);
+    this.startConfetti = this.startConfetti.bind(this);
   }
 
+  // Toast Controller
+  // Changes the gravity for infinite confetti
   dontPressMe() {
     if (this.state.num_of_clicks < 8)
       this.setState({
@@ -51,20 +56,35 @@ export class Intro extends React.Component {
       }));
   }
 
+  // Bootstrap Toast autohide function
   closeToast() {
     this.setState({
       toast_show: false
     });
   }
 
+  // Wait 3 seconds, then start the confetti
   startConfetti() {
     setTimeout(() => {
       this.setState(() => ({
         dict_check: 3,
         num_of_clicks: this.state.num_of_clicks + 1,
-        toast_show: true
+        toast_show: true,
+        finalpress: 3
       }));
     }, 3000);
+  }
+
+  // Wait 3 seconds, then reveal that the cake was a liE
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.num_of_clicks === 10 && this.finalpresscheck)
+      setTimeout(() => {
+        this.finalpresscheck = false;
+        this.setState(() => ({
+          toast_show: true,
+          finalpress: 2
+        }));
+      }, 3000);
   }
 
   render() {
@@ -77,15 +97,8 @@ export class Intro extends React.Component {
         )}
 
         {this.state.dict_check === 2 && <h1>Avishkar Kolahalu.</h1>}
-        {this.state.dict_check === 2 && (
-            <DontPressMe
-              closeit={this.closeToast.bind(this)}
-              toast_show={this.state.toast_show}
-              press_dictionary={this.press_dictionary}
-              num_of_clicks={this.state.num_of_clicks}
-            />
-          ) &&
-          this.startConfetti()}
+
+        {this.state.dict_check === 2 && this.startConfetti()}
 
         {this.state.dict_check === 3 && (
           <Confetti
@@ -96,12 +109,23 @@ export class Intro extends React.Component {
         )}
 
         <p className="p-sd">&#47;&#47; Software Developer</p>
-        <DontPressMe
-          closeit={this.closeToast.bind(this)}
-          toast_show={this.state.toast_show}
-          press_dictionary={this.press_dictionary}
-          num_of_clicks={this.state.num_of_clicks}
-        />
+        {this.state.finalpress === 1 && (
+          <DontPressMe
+            closeit={this.closeToast.bind(this)}
+            toast_show={this.state.toast_show}
+            press_dictionary={this.press_dictionary}
+            num_of_clicks={this.state.num_of_clicks}
+          />
+        )}
+
+        {this.state.finalpress === 2 && (
+          <DontPressMe
+            closeit={this.closeToast.bind(this)}
+            toast_show={this.state.toast_show}
+            press_dictionary={this.press_dictionary}
+            num_of_clicks={this.state.num_of_clicks}
+          />
+        )}
       </div>
     );
   }
