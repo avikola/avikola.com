@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import "../../common/common.scss";
 import Container from "react-bootstrap/Container";
 import { HomeButtons } from "../../components/HomeButtons";
 import { Intro } from "./Intro";

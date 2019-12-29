@@ -1,5 +1,4 @@
 import React from "react";
-import "./HomeButtons.scss";
 import { EachButton } from "./EachButton";
 
 export const HomeButtons = () => {

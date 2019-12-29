@@ -11,7 +11,7 @@ export class Intro extends React.Component {
       toast_show: false,
       dict_check: 1, // controls type of h1
       confetti: false,
-      gravity: 0.5, // gravity of confetti
+      gravity: 0.3, // gravity of confetti
       finalpress: 1 // final message toast control
     };
     this.finalpresscheck = true;
@@ -26,7 +26,7 @@ export class Intro extends React.Component {
       "I baked you a winner's cake.",
       "It's delicious, I promise.",
       "Initiating cake in 3... 2... 1...",
-      "THE CAKE WAS A LIE"
+      "THERE IS NO CAKE"
     ];
 
     this.dontPressMe = this.dontPressMe.bind(this);

@@ -7,7 +7,7 @@ export const DontPressMe = props => {
   var pressMeCSS = "dontpressmetoast";
 
   if (props.num_of_clicks === 10) {
-    delay_secs = 4500;
+    delay_secs = 4000;
     pressMeCSS = "dontpressmefinaltoast";
   }
 

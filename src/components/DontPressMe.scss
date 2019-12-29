@@ -5,13 +5,14 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   text-align: center;
-  width: 250px;
+  width: 30%;
 
   @media (max-width: 594px) {
-    margin-top: -35vh;
-    width: 100%;
-    background-color: white;
-    color: $palette-black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -39vh;
+    width: 65%;
+    color: white;
   }
 }
 
