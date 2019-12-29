@@ -5,10 +5,12 @@ import "./DontPressMe.scss";
 export const DontPressMe = props => {
   var delay_secs = 3000;
   var pressMeCSS = "dontpressmetoast";
+
   if (props.num_of_clicks === 10) {
     delay_secs = 4500;
     pressMeCSS = "dontpressmefinaltoast";
   }
+
   return (
     <Toast
       onClose={props.closeit}

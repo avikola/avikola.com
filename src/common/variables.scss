@@ -2,19 +2,7 @@ $palette-red: #ff0000;
 $palette-violet: #6a00ff;
 $palette-black: #020202;
 
-@mixin trippytexth1() {
-  color: $palette-red;
-  font-family: "Bebas Neue", cursive;
-  font-size: 7.9427083vw;
-  text-shadow: -0.6vw 0.75vh $palette-violet;
-}
-
-@mixin trippytextp() {
-  color: $palette-red;
-  font-family: "Roboto Mono", monospace;
-  font-size: 2.40885416vw;
-  text-shadow: -0.25vw 0.37vh $palette-violet;
-}
+// Home: Box Buttons
 
 @mixin trippybox() {
   background-color: $palette-red;
@@ -31,4 +19,20 @@ $palette-black: #020202;
   @media (max-width: 594px) {
     display: inline-block;
   }
+}
+
+// Default Intro Page
+
+@mixin trippytexth1() {
+  color: $palette-red;
+  font-family: "Bebas Neue", cursive;
+  font-size: 7.9427083vw;
+  text-shadow: -0.6vw 0.75vh $palette-violet;
+}
+
+@mixin trippytextp() {
+  color: $palette-red;
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.40885416vw;
+  text-shadow: -0.25vw 0.37vh $palette-violet;
 }
